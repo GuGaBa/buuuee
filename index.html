@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Задание по HTML и JavaScript</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #0f12a5;
+            padding: 20px;
+        }
+        
+        p {
+            font-size: 18px;
+            color: #333;
+            margin: 10px 0;
+        }
+        
+        .highlight {
+            color: rgb(105, 105, 231);
+            font-weight: bold;
+        }
+        
+        .block {
+            padding: 20px;
+            background-color: #0ebe57;
+            margin-top: 20px;
+        }
+        
+        .dark-theme {
+            background-color: #333;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Пример страницы</h1>
+
+    <!-- Несколько абзацев и кнопка для изменения текста -->
+    <p id="para1">Это первый абзац текста.</p>
+    <p id="para2">Это второй абзац текста.</p>
+    <p id="para3">Это третий абзац текста.</p>
+
+    <button id="changeTextBtn">Изменить текст и цвет второго абзаца</button>
+
+    <!-- Блок с текстом и кнопкой для смены темы -->
+    <div class="block" id="themeBlock">
+        <p>Этот блок содержит текст и кнопку для смены темы.</p>
+        <button id="themeBtn">Сменить тему</button>
+    </div>
+
+    <script>
+        // Скрипт для изменения текста и цвета абзаца
+        document.getElementById('changeTextBtn').addEventListener('click', function() {
+            let para = document.getElementById('para2');
+            para.textContent = "Текст и цвет этого абзаца изменены!";
+            para.classList.add('highlight');
+        });
+
+        // Скрипт для смены темы блока
+        document.getElementById('themeBtn').addEventListener('click', function() {
+            let block = document.getElementById('themeBlock');
+            block.classList.toggle('dark-theme');
+        });
+    </script>
+
+</body>
+
+</html>
